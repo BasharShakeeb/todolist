@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}Search Results{% endblock %}
+
+{% block body %}
+<div class="container my-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="text-center">
+                <i class="fas fa-search me-2"></i>Search Results
+            </h2>
+            {% if query %}
+                <p class="text-center text-muted">Results for: "{{ query }}"</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <a href="/" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back to all todos
+            </a>
+        </div>
+    </div>
+
+    {% if todos %}
+        <div class="row">
+            {% for todo in todos %}
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm todo-item">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ todo.title }}</h5>
+                            <p class="card-text">{{ todo.description }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Added: {{ todo.time.strftime('%Y-%m-%d') }}</small>
+                                <div class="btn-group">
+                                    <a href="/update/{{ todo.sno }}" class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-edit me-1"></i>Edit
+                                    </a>
+                                    <a href="/delete/{{ todo.sno }}" class="btn btn-sm btn-outline-danger">
+                                        <i class="fas fa-trash me-1"></i>Delete
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="row">
+            <div class="col text-center">
+                <div class="alert alert-info" role="alert">
+                    {% if query %}
+                        <i class="fas fa-info-circle me-2"></i>No todos found matching "{{ query }}"
+                    {% else %}
+                        <i class="fas fa-info-circle me-2"></i>Please enter a search term
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %} 

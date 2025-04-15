@@ -1,0 +1,378 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock %}
+{% block body %}
+<!-- Main Navigation Buttons -->
+<div class="row mb-5">
+  <div class="col-12 text-center mb-4" data-aos="fade-up" data-aos-duration="800">
+    <h1 class="display-4 main-title">
+      <i class="fas fa-check-circle text-primary me-2"></i>Welcome to TodoMaster
+    </h1>
+    <p class="lead text-muted">What would you like to do today?</p>
+  </div>
+  
+  <div class="col-md-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+    <div class="card action-card h-100 border-0 shadow-sm">
+      <div class="card-body text-center py-5">
+        <div class="action-icon-wrapper mb-4">
+          <i class="fas fa-plus-circle action-icon add-icon"></i>
+        </div>
+        <h2 class="card-title mb-4">Add Task</h2>
+        <p class="card-text mb-4">Create a new task with title, description and track your progress.</p>
+        <a href="/add_task" class="btn btn-primary btn-lg action-btn add-task-btn">
+          <i class="fas fa-plus me-2"></i> Add New Task
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+    <div class="card action-card h-100 border-0 shadow-sm">
+      <div class="card-body text-center py-5">
+        <div class="action-icon-wrapper mb-4">
+          <i class="fas fa-list-check action-icon view-icon"></i>
+        </div>
+        <h2 class="card-title mb-4">View Tasks</h2>
+        <p class="card-text mb-4">See all your tasks, manage them, mark as complete or update details.</p>
+        <a href="/view_tasks" class="btn btn-primary btn-lg action-btn view-task-btn">
+          <i class="fas fa-eye me-2"></i> View All Tasks
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Motivational Quotes -->
+<div class="row mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+  <div class="col-12">
+    <div class="card border-0 shadow-sm quote-card">
+      <div class="card-body text-center py-4">
+        <i class="fas fa-quote-left fa-2x text-primary mb-3 quote-icon"></i>
+        <div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p class="lead quote-text mb-3">"The key is not to prioritize what's on your schedule, but to schedule your priorities."</p>
+              <p class="text-muted quote-author">- Stephen Covey</p>
+            </div>
+            <div class="carousel-item">
+              <p class="lead quote-text mb-3">"Your time is limited, don't waste it living someone else's life."</p>
+              <p class="text-muted quote-author">- Steve Jobs</p>
+            </div>
+            <div class="carousel-item">
+              <p class="lead quote-text mb-3">"The way to get started is to quit talking and begin doing."</p>
+              <p class="text-muted quote-author">- Walt Disney</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Productivity Tips -->
+<div class="row mb-5">
+  <div class="col-12 mb-4" data-aos="fade-up" data-aos-duration="800">
+    <h2 class="text-center section-title">
+      <i class="fas fa-lightbulb text-primary me-2"></i>Productivity Tips
+    </h2>
+  </div>
+  
+  <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card h-100 border-0 shadow-sm tip-card">
+      <div class="card-body">
+        <div class="tip-number">01</div>
+        <h3 class="card-title mt-3 mb-3 tip-title">Break It Down</h3>
+        <p class="card-text">Split big tasks into smaller, manageable subtasks that you can complete more easily.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="card h-100 border-0 shadow-sm tip-card">
+      <div class="card-body">
+        <div class="tip-number">02</div>
+        <h3 class="card-title mt-3 mb-3 tip-title">Set Time Limits</h3>
+        <p class="card-text">Use time boxing or the Pomodoro Technique to work in focused sprints with short breaks.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+    <div class="card h-100 border-0 shadow-sm tip-card">
+      <div class="card-body">
+        <div class="tip-number">03</div>
+        <h3 class="card-title mt-3 mb-3 tip-title">Prioritize Ruthlessly</h3>
+        <p class="card-text">Focus on high-impact tasks first using methods like the Eisenhower Matrix.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Progress Tracker -->
+<div class="row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+  <div class="col-12">
+    <div class="card border-0 shadow-sm progress-card">
+      <div class="card-body p-4">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h3 class="card-title progress-title">
+              <i class="fas fa-chart-line text-primary me-2"></i>Track Your Progress
+            </h3>
+            <p class="card-text mb-4">Stay motivated by visualizing your progress and celebrating your wins, no matter how small.</p>
+            <a href="/view_tasks" class="btn btn-outline-primary">
+              <i class="fas fa-arrow-right me-2"></i>Check Your Tasks
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="progress-circle-wrapper">
+              <i class="fas fa-rocket progress-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Main navigation buttons */
+  .main-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+  }
+  
+  .action-card {
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .action-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .action-icon-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: rgba(13, 110, 253, 0.1);
+    margin-bottom: 1.5rem;
+    transition: all 0.5s ease;
+  }
+  
+  .action-card:hover .action-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    background-color: rgba(13, 110, 253, 0.2);
+  }
+  
+  .action-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    transition: all 0.5s ease;
+  }
+  
+  .action-card:hover .action-icon {
+    transform: scale(1.2);
+  }
+  
+  .add-icon {
+    color: #28a745;
+  }
+  
+  .view-icon {
+    color: #0d6efd;
+  }
+  
+  .action-btn {
+    transition: all 0.5s ease;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+  
+  .action-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Quote section */
+  .quote-card {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .quote-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .quote-icon {
+    transition: all 0.5s ease;
+    opacity: 0.7;
+  }
+  
+  .quote-card:hover .quote-icon {
+    transform: scale(1.5) rotate(-10deg);
+    opacity: 0.3;
+  }
+  
+  .quote-text {
+    font-style: italic;
+    transition: all 0.3s ease;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .quote-author {
+    font-weight: 600;
+  }
+  
+  /* Productivity tips */
+  .section-title {
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+  }
+  
+  .tip-card {
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .tip-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(13, 110, 253, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .tip-card:hover .tip-number {
+    color: rgba(13, 110, 253, 0.3);
+    transform: scale(1.2) translateX(10px);
+  }
+  
+  .tip-title {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .tip-card:hover .tip-title {
+    color: var(--primary-color);
+    transform: translateX(5px);
+  }
+  
+  /* Progress tracker */
+  .progress-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .progress-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .progress-title {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .progress-card:hover .progress-title {
+    color: var(--primary-color);
+    transform: translateX(5px);
+  }
+  
+  .progress-circle-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+  }
+  
+  .progress-card:hover .progress-circle-wrapper {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-icon {
+    font-size: 3rem;
+    color: white;
+    transition: all 0.5s ease;
+  }
+  
+  .progress-card:hover .progress-icon {
+    transform: translateY(-5px);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .action-card {
+      margin-bottom: 2rem;
+    }
+    
+    .tip-card {
+      margin-bottom: 1.5rem;
+    }
+    
+    .progress-circle-wrapper {
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the quote carousel
+    var quoteCarousel = new bootstrap.Carousel(document.getElementById('quoteCarousel'), {
+      interval: 5000
+    });
+  });
+</script>
+{% endblock body %}

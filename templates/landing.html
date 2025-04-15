@@ -1,0 +1,377 @@
+{% extends 'base.html' %}
+{% block title %}
+Welcome to TodoMaster
+{% endblock %}
+{% block body %}
+<div class="landing-container">
+  <!-- Hero Section -->
+  <section class="hero-section text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+    <div class="card shadow-sm border-0 hero-card">
+      <div class="card-body py-5 hero-body">
+        <div class="hero-content">
+          <h1 class="display-4 fw-bold mb-3 hero-title text-white">
+            <i class="fas fa-check-circle text-white me-2"></i>TodoMaster
+          </h1>
+          <p class="lead mb-4 hero-subtitle text-white">Simplify your life, one task at a time.</p>
+          <div class="mt-4 mb-5">
+            <a href="/todos" class="btn btn-light btn-lg me-2 get-started-btn">
+              <i class="fas fa-play-circle me-2"></i>Get Started
+            </a>
+            <a href="#features" class="btn btn-outline-light btn-lg learn-more-btn">
+              <i class="fas fa-info-circle me-2"></i>Learn More
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+    <h2 class="text-center mb-5 section-title">
+      <i class="fas fa-star text-primary me-2"></i>Key Features
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <div class="card-body text-center">
+            <i class="fas fa-tasks fa-3x text-primary mb-3 feature-icon"></i>
+            <h3 class="card-title feature-title">Easy Task Management</h3>
+            <p class="card-text">Create, update and delete tasks with just a few clicks. Stay organized effortlessly.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <div class="card-body text-center">
+            <i class="fas fa-search fa-3x text-primary mb-3 feature-icon"></i>
+            <h3 class="card-title feature-title">Powerful Search</h3>
+            <p class="card-text">Find your tasks quickly with our powerful search functionality that filters results instantly.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow-sm border-0 feature-card">
+          <div class="card-body text-center">
+            <i class="fas fa-moon fa-3x text-primary mb-3 feature-icon"></i>
+            <h3 class="card-title feature-title">Dark Mode</h3>
+            <p class="card-text">Easy on your eyes with our customizable dark mode that works across all your devices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section mb-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+    <h2 class="text-center mb-5 section-title">
+      <i class="fas fa-quote-left text-primary me-2"></i>What People Say
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm border-0 testimonial-card">
+          <div class="card-body">
+            <div class="d-flex justify-content-end mb-3">
+              <i class="fas fa-quote-right fa-2x text-primary quote-icon"></i>
+            </div>
+            <p class="card-text testimonial-text">"TodoMaster has completely transformed how I organize my daily tasks. The interface is beautiful and intuitive."</p>
+            <div class="d-flex align-items-center mt-4">
+              <div class="avatar me-3">
+                <i class="fas fa-user-circle fa-2x text-primary"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 testimonial-name">Sarah Johnson</h5>
+                <small class="text-muted">Designer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm border-0 testimonial-card">
+          <div class="card-body">
+            <div class="d-flex justify-content-end mb-3">
+              <i class="fas fa-quote-right fa-2x text-primary quote-icon"></i>
+            </div>
+            <p class="card-text testimonial-text">"The search functionality is incredible! I can find any task in seconds, even with my hundreds of to-dos."</p>
+            <div class="d-flex align-items-center mt-4">
+              <div class="avatar me-3">
+                <i class="fas fa-user-circle fa-2x text-primary"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 testimonial-name">Michael Lee</h5>
+                <small class="text-muted">Project Manager</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow-sm border-0 testimonial-card">
+          <div class="card-body">
+            <div class="d-flex justify-content-end mb-3">
+              <i class="fas fa-quote-right fa-2x text-primary quote-icon"></i>
+            </div>
+            <p class="card-text testimonial-text">"I love the dark mode feature! It's perfect for late night planning sessions and doesn't strain my eyes."</p>
+            <div class="d-flex align-items-center mt-4">
+              <div class="avatar me-3">
+                <i class="fas fa-user-circle fa-2x text-primary"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 testimonial-name">Jessica Taylor</h5>
+                <small class="text-muted">Student</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section mb-5" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+    <div class="card shadow-sm border-0 cta-card">
+      <div class="card-body py-5 text-center">
+        <h2 class="card-title mb-4 cta-title">Ready to Get Organized?</h2>
+        <p class="lead mb-4 cta-text">Start managing your tasks easily and efficiently today.</p>
+        <a href="/todos" class="btn btn-primary btn-lg cta-btn">
+          <i class="fas fa-paper-plane me-2"></i>Start Using TodoMaster Now
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* Landing Page Specific Styles */
+  .hero-title, .section-title {
+    transition: all 0.5s ease;
+  }
+  
+  .hero-title:hover, .section-title:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+  }
+  
+  .hero-subtitle {
+    transition: all 0.3s ease;
+  }
+  
+  .hero-subtitle:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero-card {
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .hero-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .hero-img {
+    transition: all 0.5s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+  }
+  
+  .hero-card:hover .hero-img {
+    transform: translateY(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .get-started-btn {
+    transition: all 0.5s ease;
+  }
+  
+  .get-started-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .learn-more-btn {
+    transition: all 0.5s ease;
+  }
+  
+  .learn-more-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-card {
+    transition: all 0.5s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .feature-icon {
+    transition: all 0.5s ease;
+  }
+  
+  .feature-card:hover .feature-icon {
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  .feature-title {
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover .feature-title {
+    color: var(--primary-color);
+  }
+  
+  .testimonial-card {
+    transition: all 0.5s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .quote-icon {
+    transition: all 0.5s ease;
+    opacity: 0.5;
+  }
+  
+  .testimonial-card:hover .quote-icon {
+    transform: scale(1.3) rotate(-10deg);
+    opacity: 0.7;
+  }
+  
+  .testimonial-text {
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card:hover .testimonial-text {
+    transform: scale(1.02);
+  }
+  
+  .testimonial-name {
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card:hover .testimonial-name {
+    color: var(--primary-color);
+  }
+  
+  .cta-card {
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .cta-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .cta-title {
+    transition: all 0.3s ease;
+  }
+  
+  .cta-card:hover .cta-title {
+    color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  
+  .cta-text {
+    transition: all 0.3s ease;
+  }
+  
+  .cta-card:hover .cta-text {
+    transform: scale(1.03);
+  }
+  
+  .cta-btn {
+    transition: all 0.5s ease;
+  }
+  
+  .cta-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .hero-body {
+    background-image: linear-gradient(rgba(13, 110, 253, 0.8), rgba(102, 16, 242, 0.9)), url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 1rem;
+    border-radius: 0.375rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+  }
+  
+  .hero-subtitle {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-img {
+    transition: all 0.5s ease;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-body {
+      padding: 3rem 1rem;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-img {
+      margin-top: 2rem;
+    }
+  }
+</style>
+{% endblock body %} 
